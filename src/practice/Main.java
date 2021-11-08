@@ -32,14 +32,14 @@ public class Main {
     1 <= str1.length <= 1000
     1 <= str2.length <= 1000
     str1 and str2 consist of English uppercase letters.*/
-        //String str1 = "NLZGMNLZGMNLZGMNLZGMNLZGMNLZGMNLZGMNLZGM";
-        //String str2 = "NLZGMNLZGMNLZGMNLZGMNLZGMNLZGMNLZGMNLZGMNLZGM";
-        //String str1 = "000000";
-        //String str2 = "000";
-        String str1 = "leet";
-        String str2 = "code";
-        //System.out.println(repeatedSubstringPattern(str1));
-        //System.out.println(repeatedSubstringPattern(str2));
+        String str1 = "NLZGMNLZGMNLZGMNLZGMNLZGMNLZGMNLZGMNLZGM";
+        String str2 = "NLZGMNLZGMNLZGMNLZGMNLZGMNLZGMNLZGMNLZGMNLZGMNLZGM";
+        // String str1 = "000000";
+        // String str2 = "000";
+        // String str1 = "leet";
+        // String str2 = "code";
+        // System.out.println(repeatedSubstringPattern(str1));
+        // System.out.println(repeatedSubstringPattern(str2));
 
         System.out.println("The answer is " + gcdOfStrings(str1, str2));
     }
@@ -50,6 +50,7 @@ public class Main {
         for (int i = 1; i <= len; i++) {
 
             if ((str1.replaceAll(str1.substring(0, i), "").length() == 0) && (str2.replaceAll(str1.substring(0, i), "").length() == 0)) {
+                System.out.println(i);
                 pattern = str1.substring(0, i);
             }
         }
